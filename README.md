@@ -109,5 +109,4 @@ Contributions are welcome! Fork the repository, submit a pull request, or open a
 
 ## 🧑‍💻 **Contact**  
 
-For any questions or inquiries, feel free to contact us via email at [taysirbouzidi123@gmail.com](mailto:taysirbouzidi123@gmail.com).  
-```
+For any questions or inquiries, feel free to contact us via email at [taysirbouzidi123@gmail.com](mailto:taysirbouzidi123@gmail.com).
