@@ -1,0 +1,108 @@
+[{
+  "_id": {
+    "$oid": "67516b10f482bb1819b98afb"
+  },
+  "userId": {
+    "$oid": "67516ab3f482bb1819b98ae8"
+  },
+  "candidateId": {
+    "$oid": "67516758f482bb1819b98a3e"
+  },
+  "electionId": {
+    "$oid": "6750a27ac89ba11dda45b9b9"
+  },
+  "createdAt": {
+    "$date": "2024-12-05T08:57:52.135Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67516b2ef482bb1819b98b0a"
+  },
+  "userId": {
+    "$oid": "67516ac4f482bb1819b98aeb"
+  },
+  "candidateId": {
+    "$oid": "675167ddf482bb1819b98a57"
+  },
+  "electionId": {
+    "$oid": "6750a27ac89ba11dda45b9b9"
+  },
+  "createdAt": {
+    "$date": "2024-12-05T08:58:22.916Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67516b3ff482bb1819b98b11"
+  },
+  "userId": {
+    "$oid": "67516ad4f482bb1819b98aee"
+  },
+  "candidateId": {
+    "$oid": "675167ddf482bb1819b98a57"
+  },
+  "electionId": {
+    "$oid": "6750a27ac89ba11dda45b9b9"
+  },
+  "createdAt": {
+    "$date": "2024-12-05T08:58:39.420Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67516b65f482bb1819b98b29"
+  },
+  "userId": {
+    "$oid": "67516aeaf482bb1819b98af1"
+  },
+  "candidateId": {
+    "$oid": "67516758f482bb1819b98a3e"
+  },
+  "electionId": {
+    "$oid": "6750a27ac89ba11dda45b9b9"
+  },
+  "createdAt": {
+    "$date": "2024-12-05T08:59:17.886Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67516b7bf482bb1819b98b32"
+  },
+  "userId": {
+    "$oid": "67516afef482bb1819b98af4"
+  },
+  "candidateId": {
+    "$oid": "675167ddf482bb1819b98a57"
+  },
+  "electionId": {
+    "$oid": "6750a27ac89ba11dda45b9b9"
+  },
+  "createdAt": {
+    "$date": "2024-12-05T08:59:39.873Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "675178791a20d41094cef738"
+  },
+  "userId": {
+    "$oid": "6751786c1a20d41094cef731"
+  },
+  "candidateId": {
+    "$oid": "675167ddf482bb1819b98a57"
+  },
+  "electionId": {
+    "$oid": "6750a27ac89ba11dda45b9b9"
+  },
+  "createdAt": {
+    "$date": "2024-12-05T09:55:05.441Z"
+  },
+  "__v": 0
+}]

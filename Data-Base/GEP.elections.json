@@ -1,0 +1,37 @@
+[{
+  "_id": {
+    "$oid": "67516a0ef482bb1819b98ac7"
+  },
+  "title": "Presidential Election 2024",
+  "startDate": {
+    "$date": "2024-12-10T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2024-12-20T23:59:59.000Z"
+  },
+  "isActive": true,
+  "candidates": [
+    {
+      "$oid": "67516758f482bb1819b98a3e"
+    },
+    {
+      "$oid": "675167ddf482bb1819b98a57"
+    },
+    {
+      "$oid": "67516844f482bb1819b98a65"
+    },
+    {
+      "$oid": "675168abf482bb1819b98a73"
+    },
+    {
+      "$oid": "675168d4f482bb1819b98a78"
+    },
+    {
+      "$oid": "6751695df482bb1819b98ab9"
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-12-05T08:53:34.288Z"
+  },
+  "__v": 0
+}]

@@ -1,0 +1,27 @@
+.card {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-header {
+    font-weight: bold;
+    background-color: #f8f9fa;
+  }
+  
+  .table {
+    margin-top: 20px;
+  }
+  
+  .table th, .table td {
+    vertical-align: middle;
+  }
+  
+  button:disabled {
+    opacity: 0.5;
+  }
+  
+  .alert-info {
+    padding: 10px;
+    text-align: center;
+  }
+  

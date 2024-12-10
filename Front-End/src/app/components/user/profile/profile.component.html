@@ -1,0 +1,87 @@
+<div class="container mt-5">
+    <div class="row">
+        <!-- Profile Picture and Basic Info -->
+        <div class="col-md-4">
+            <div class="profile-header text-center">
+                <div class="">
+                    <img [src]="profile.profilePicture || 'assets/default-profile.jpg'" alt="Profile Picture"
+                        class="profile-pic rounded-full border-4 border-gray-300" />
+                    <input type="file" (change)="onFileChange($event)" class="mt-2" #fileInput style="display:none"
+                        [disabled]="!isEditing" />
+                    <button  *ngIf="isEditing" class="btn btn-secondary mt-3" style="width: 50%;;" (click)="fileInput.click()" [disabled]="!isEditing">
+                        Change Picture
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- User Information Form -->
+        <div class="col-md-8">
+            <div class="profile-info">
+                <h2 class="text-center text-2xl font-semibold mb-6">User Profile</h2>
+
+                <!-- Edit Profile Form -->
+                <form (ngSubmit)="onSaveChanges()" *ngIf="isEditing" #profileForm="ngForm">
+                    <div class="form-group mb-4">
+                        <label for="name" class="block text-sm font-medium">Full Name</label>
+                        <input type="text" id="name" class="form-control w-full border-gray-300 rounded-md"
+                            [(ngModel)]="profile.name" name="name" required />
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label for="email" class="block text-sm font-medium">Email</label>
+                        <input type="email" id="email" class="form-control w-full border-gray-300 rounded-md"
+                            [(ngModel)]="profile.email" name="email" required />
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label class="block text-sm font-medium">Favorites</label>
+                        <div *ngFor="let favorite of favoritesNames" class="flex items-center">
+                            <input type="checkbox" [(ngModel)]="favorite.isSelected" [name]="'favorite-' + favorite.id"
+                                class="form-check-input" />
+                            <label class="form-check-label ml-2">{{ favorite.name }}</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label for="newPassword" class="block text-sm font-medium">New Password</label>
+                        <input type="password" id="newPassword" class="form-control w-full border-gray-300 rounded-md"
+                            [(ngModel)]="newPassword" name="newPassword" required />
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label for="confirmPassword" class="block text-sm font-medium">Confirm New Password</label>
+                        <input type="password" id="confirmPassword"
+                            class="form-control w-full border-gray-300 rounded-md" [(ngModel)]="confirmPassword"
+                            name="confirmPassword" required />
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary w-full"
+                            [disabled]="profileForm.invalid || newPassword !== confirmPassword">
+                            Save Changes
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Display User Information -->
+                <div *ngIf="!isEditing">
+                    <div class="profile-details">
+                        <p><strong>Name:</strong> {{ profile.name }}</p>
+                        <p><strong>Email:</strong> {{ profile.email }}</p>
+                        <strong>Favorites:</strong>
+                        <ul class="list-disc pl-5">
+                            <li *ngFor="let name of favoritesNames">{{ name.name }}</li>
+                        </ul>
+
+                        <p><strong>Password:</strong> *********</p>
+
+                        <button class="btn btn-primary mt-4 w-full" (click)="onEditProfile()">
+                            Edit Profile
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

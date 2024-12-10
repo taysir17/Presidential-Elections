@@ -1,0 +1,95 @@
+<div class="container mt-5">
+    <div class="card">
+      <div class="card-header">
+        <h4>Add Candidate</h4>
+      </div>
+      <div class="card-body">
+        <form (ngSubmit)="onSubmit()" #candidateForm="ngForm">
+          <!-- Candidate Name -->
+          <div class="mb-3">
+            <label for="name" class="form-label">Candidate Name</label>
+            <input
+              type="text"
+              id="name"
+              class="form-control"
+              [(ngModel)]="candidate.name"
+              name="name"
+              required
+            />
+          </div>
+  
+          <!-- Party -->
+          <div class="mb-3">
+            <label for="party" class="form-label">Party</label>
+            <input
+              type="text"
+              id="party"
+              class="form-control"
+              [(ngModel)]="candidate.party"
+              name="party"
+              required
+            />
+          </div>
+  
+          <!-- Biography -->
+          <div class="mb-3">
+            <label for="biography" class="form-label">Biography</label>
+            <textarea
+              id="biography"
+              class="form-control"
+              [(ngModel)]="candidate.biography"
+              name="biography"
+              required
+            ></textarea>
+          </div>
+  
+          <!-- Program -->
+          <div class="mb-3">
+            <label for="program" class="form-label">Program</label>
+            <textarea
+              id="program"
+              class="form-control"
+              [(ngModel)]="candidate.program"
+              name="program"
+              required
+            ></textarea>
+          </div>
+  
+          <!-- Upload Photo -->
+          <div class="mb-3">
+            <label for="file" class="form-label">Upload Photo</label>
+            <input
+              type="file"
+              id="file"
+              class="form-control"
+              (change)="onFileSelect($event)"
+            />
+          </div>
+  
+          <!-- Preview Photo -->
+          <div *ngIf="candidate.photoUrl" class="mb-3">
+            <label for="preview" class="form-label">Photo Preview:</label>
+            <img
+              [src]="candidate.photoUrl"
+              alt="Photo Preview"
+              class="img-thumbnail"
+              style="max-width: 200px;"
+            />
+          </div>
+  
+          <!-- Submit Button -->
+          <button
+            type="submit"
+            class="btn btn-primary"
+            [disabled]="!candidateForm.form.valid"
+          >
+            Save Candidate
+          </button>
+          <a [routerLink]="['/admin/dashboard']" class="btn btn-secondary ms-2">
+            Cancel
+          </a>
+        </form>
+      </div>
+    </div>
+  </div>
+  

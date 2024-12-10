@@ -1,0 +1,50 @@
+<div class="container mt-5">
+  <div class="card">
+      <div class="card-header">
+          <h4>Add Candidate</h4>
+      </div>
+      <div class="card-body">
+          <form [formGroup]="candidateForm" (ngSubmit)="onSubmit()">
+              
+              <!-- Candidate Name -->
+              <div class="mb-3">
+                  <label for="name" class="form-label">Candidate Name</label>
+                  <input id="name" formControlName="name" type="text" class="form-control" />
+              </div>
+
+              <!-- Party -->
+              <div class="mb-3">
+                  <label for="party" class="form-label">Party</label>
+                  <input id="party" formControlName="party" type="text" class="form-control" />
+              </div>
+
+              <!-- Biography -->
+              <div class="mb-3">
+                  <label for="biography" class="form-label">Biography</label>
+                  <textarea id="biography" formControlName="biography" class="form-control"></textarea>
+              </div>
+
+              <!-- Program -->
+              <div class="mb-3">
+                  <label for="program" class="form-label">Program</label>
+                  <textarea id="program" formControlName="program" class="form-control"></textarea>
+              </div>
+
+              <!-- Upload Photo -->
+              <div class="mb-3">
+                  <label for="file" class="form-label">Upload Photo</label>
+                  <input type="file" id="file" class="form-control" (change)="onFileChange($event)" />
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary" [disabled]="loading">Update Candidate</button>
+              <a [routerLink]="['/admin/dashboard']" class="btn btn-secondary ms-2">Cancel</a>
+
+              <!-- Success and Error Messages -->
+              <p *ngIf="errorMessage" class="text-danger">{{ errorMessage }}</p>
+              <p *ngIf="successMessage" class="text-success">{{ successMessage }}</p>
+
+          </form>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+canvas {
+    max-width: 100%;
+    max-height: 400px;
+}
+
+h5 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.table th, .table td {
+    text-align: center;
+}
+
+.table {
+    margin-top: 20px;
+}
+
+.container {
+    padding-top: 50px;
+}
+.col-md-6,canvas{
+    margin: 0px !important;
+    padding: 0px !important;
+}

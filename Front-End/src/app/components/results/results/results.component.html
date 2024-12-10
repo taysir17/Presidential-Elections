@@ -1,0 +1,40 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <!-- Candidate Vote Chart -->
+        <div class="col-md-6">
+            <h5 class="text-center">Votes per Candidate</h5>
+            <canvas id="voteChart"></canvas>
+        </div>
+
+        <!-- Top 5 Candidates Chart -->
+        <div class="col-md-6">
+            <h5 class="text-center">Top 5 Candidates</h5>
+            <canvas id="topCandidatesChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Candidate List -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <h5>List of Candidates</h5>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Rank</th>
+                        <th scope="col">Candidate</th>
+                        <th scope="col">Votes</th>
+                        <th scope="col">Percentage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let candidate of candidates; let i = index">
+                        <td>{{ i + 1 }}</td>
+                        <td>{{ candidate.name }}</td>
+                        <td>{{ voteCounts[candidate._id!] || 0 }}</td>
+                        <td>{{ calculatePercentage(voteCounts[candidate._id!] || 0) | number: '1.0-2' }}%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

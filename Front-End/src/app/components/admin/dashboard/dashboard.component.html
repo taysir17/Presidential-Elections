@@ -1,0 +1,87 @@
+<div class="container mt-5">
+    <div class="row">
+        <!-- Overview Section -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Platform Stats</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li><strong>Total Users:</strong> {{ totalUsers }}</li>
+                        <li><strong>Total Votes Cast:</strong> {{ totalVotes }}</li>
+                        <li><strong>Total Candidates:</strong> {{ totalCandidates }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Candidates Management Section -->
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Manage Candidates</h5>
+                </div>
+                <div class="card-body">
+                    <button class="btn btn-primary mb-3" [routerLink]="['/add-candidate']">Add New Candidate</button>
+
+                    <div *ngIf="candidates.length === 0" class="alert alert-info">
+                        No candidates available.
+                    </div>
+
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Party</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let candidate of candidates">
+                                <td>{{ candidate.name }}</td>
+                                <td>{{ candidate.party }}</td>
+                                <td>
+                                    <button class="btn btn-secondary btn-sm" [routerLink]="['/edit-candidate', candidate._id]"><i class="bi bi-pencil-square"></i></button>
+                                    <button class="btn btn-danger btn-sm" (click)="deleteCandidate(candidate._id!)"><i class="bi bi-trash-fill"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comments Management Section -->
+    <!--<div class="row mt-4">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Manage Comments</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Comment</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let comment of comments">
+                                <td>{{ comment.userId }}</td>
+                                <td>{{ comment.content }}</td>
+                                <td>
+                                    <button class="btn btn-success btn-sm" (click)="approveComment(comment)">Approve</button>
+                                    <button class="btn btn-danger btn-sm" (click)="deleteComment(comment)">Delete</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>-->
+</div>

@@ -1,0 +1,32 @@
+[{
+  "_id": {
+    "$oid": "67516b17f482bb1819b98afd"
+  },
+  "userId": {
+    "$oid": "67516ab3f482bb1819b98ae8"
+  },
+  "candidateId": {
+    "$oid": "67516758f482bb1819b98a3e"
+  },
+  "content": "comment 1",
+  "createdAt": {
+    "$date": "2024-12-05T08:57:59.945Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67516b6cf482bb1819b98b2b"
+  },
+  "userId": {
+    "$oid": "67516aeaf482bb1819b98af1"
+  },
+  "candidateId": {
+    "$oid": "67516758f482bb1819b98a3e"
+  },
+  "content": "comment 2\n",
+  "createdAt": {
+    "$date": "2024-12-05T08:59:24.543Z"
+  },
+  "__v": 0
+}]

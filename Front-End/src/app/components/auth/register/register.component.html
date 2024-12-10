@@ -1,0 +1,66 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg">
+                <div class="card-body">
+                    <h4 class="card-title text-center">Register</h4>
+
+                    <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" id="name" class="form-control" formControlName="name">
+                            <div *ngIf="f['name'].touched && f['name'].invalid" class="text-danger">
+                                <div *ngIf="f['name'].errors?.['required']">Name is required.</div>
+                                <div *ngIf="f['name'].errors?.['minlength']">Name must be at least 3 characters long.</div>
+                            </div>
+                            
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" id="email" class="form-control" formControlName="email">
+                            <div *ngIf="f['email'].touched && f['email'].invalid" class="text-danger">
+                                <div *ngIf="f['email'].errors?.['required']">Email is required.</div>
+                                <div *ngIf="f['email'].errors?.['email']">Please enter a valid email.</div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" id="password" class="form-control" formControlName="password">
+                            <div *ngIf="f['password'].touched && f['password'].invalid" class="text-danger">
+                                <div *ngIf="f['password'].errors?.['required']">Password is required.</div>
+                                <div *ngIf="f['password'].errors?.['minlength']">Password must be at least 6 characters long.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" id="confirmPassword" class="form-control"
+                                formControlName="confirmPassword">
+                            <div *ngIf="f['confirmPassword'].touched && f['confirmPassword'].invalid" class="text-danger">
+                                <div *ngIf="f['confirmPassword'].errors?.['required']">Please confirm your password.</div>
+                                <div *ngIf="registerForm.errors?.['passwordMismatch']" class="text-danger">
+                                    Passwords do not match.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between">
+                            <button type="submit" class="btn btn-primary" [disabled]="registerForm.invalid || loading">
+                                <span *ngIf="loading">Loading...</span>
+                                <span *ngIf="!loading">Register</span>
+                            </button>
+                            <a [routerLink]="['/login']" class="btn btn-link">Go Back to Login</a>
+                        </div>
+
+                        <div *ngIf="errorMessage" class="mt-3 text-danger text-center">
+                            {{ errorMessage }}
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

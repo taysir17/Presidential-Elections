@@ -1,0 +1,22 @@
+.container {
+    padding-top: 50px;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 15px;
+    }
+}
+
+.btn-primary {
+    margin: 10px;
+}
+
+img{
+    width: 50%;
+    align-self: center;
+}

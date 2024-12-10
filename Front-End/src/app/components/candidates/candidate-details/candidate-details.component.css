@@ -1,0 +1,71 @@
+/* Candidate Detail Card */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-top: 15px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 4px solid #f1f1f1;
+  }
+  
+  .favorite-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .favorite-icon.favorite {
+    color: gold;
+  }
+  
+  .favorite-icon:not(.favorite) {
+    color: lightgray;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .btn-primary {
+    font-size: 1rem;
+  }
+  
+  .comments-section {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  
+  .comment {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-floating textarea {
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 1rem;
+    resize: none;
+  }
+  
+  
+
+  
