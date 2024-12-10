@@ -95,6 +95,19 @@ Visit [http://localhost:4200](http://localhost:4200) in your browser to access t
 
 ---
 
+## 📸 **Screenshots**
+
+![Page Screenshot](screenshots/home.png)
+![Page Screenshot](screenshots/condidate.png)
+![Page Screenshot](screenshots/cond.png)
+![Page Screenshot](screenshots/results.png)
+![Page Screenshot](screenshots/login.png)
+![Page Screenshot](screenshots/signup.png)
+![Page Screenshot](screenshots/profile.png)
+![Page Screenshot](screenshots/admin.png)
+
+---
+
 ## 📜 **License**  
 
 This project is licensed under the MIT License. Check the [LICENSE.md](LICENSE.md) file for details.  
@@ -109,4 +122,6 @@ Contributions are welcome! Fork the repository, submit a pull request, or open a
 
 ## 🧑‍💻 **Contact**  
 
-For any questions or inquiries, feel free to contact us via email at [taysirbouzidi123@gmail.com](mailto:taysirbouzidi123@gmail.com).
+For any questions or inquiries, feel free to contact us via email at 
+[Taissir BOUZIDI](mailto:taysirbouzidi123@gmail.com).
+[Sofyen LAGHOUANEM](mailto:sofienlaghouanem@gmail.com).
